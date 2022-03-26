@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#container {
+  text-align: center;
+}
+
+body {
+  background: rgb(230, 230, 230);
+  background: linear-gradient(
+      0deg,
+      rgba(230, 230, 230, 1) 0%,
+      rgba(255, 255, 255, 1) 100%
+    )
+    no-repeat center fixed;
+
+  width: 100vw;
+  height: 100vh;
+}
+main {
+  display: grid;
+  columns: 3;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  gap: 2rem;
+  height: 100vh;
+}
+.section {
+  width: 6rem;
+  height: 6rem;
+  font-size: 3.75rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  margin: 0.312rem;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.initial_section {
+  background: #c6c6c6;
+  color: #c6c6c6;
+}
+
+.played_section {
+  color: black;
+}
+h1 {
+  margin-bottom: 2.312rem;
+  text-align: center;
+}
+
+.winnerClass,
+.player {
+  font-size: 2rem;
+  margin-top: 3.312rem;
+}
+
+.winner_card {
+  visibility: hidden;
+  opacity: 0;
+  transition: 200ms;
+}
+
+.winner_card.show {
+  width: 6rem;
+  height: 6rem;
+  background: #c6c6c6;
+  visibility: visible;
+  opacity: 1;
+  background: radial-gradient(rgb(43, 128, 232) 10%, #fc5d5d);
+  padding: 1rem;
+  font-size: 3.12rem;
+  margin-top: 1.5rem;
+  display: inline-block;
+  bottom: 0;
+}
+
+#info_game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3.312rem;
+  font-size: 1.5rem;
+}
+
+.player {
+  background-color: rgb(178, 182, 197);
+  display: inline-block;
+  align-content: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.scoreboard {
+  font-size: 1.5rem;
+  margin-top: 3.312rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.scores {
+  display: flex;
+  align-items: center;
+}
+
+#scoreboard_X,
+#scoreboard_O {
+  width: 14rem;
+  max-height: 5rem;
+  text-align: center;
+  display: flex;
+  padding: 1rem;
+  clip-path: polygon(1% 0, 100% 0, 65% 100%, 0% 100%);
+}
+
+.section_played_X {
+  background: rgb(156, 10, 10);
+}
+
+.section_played_O {
+  background: rgb(47, 144, 23);
+}
+
+#scoreboard_X {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    86deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(86, 253, 45, 1) 100%
+  );
+}
+
+#scoreboard_O {
+  background: rgb(169, 0, 0);
+  background: linear-gradient(
+    258deg,
+    rgba(169, 0, 0, 1) 0%,
+    rgba(253, 87, 45, 1) 100%
+  );
+}
+
+#playerX,
+#playerO {
+  display: block;
+  font-size: 3rem;
+}
+
+#restart_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#restart {
+  box-sizing: border-box;
+
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgb(230, 230, 230);
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border-color: #3498db;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+
+  transition: all 150ms ease-in-out;
+}
+
+#restart:hover,
+#restart:focus {
+  color: #fffbfb;
+  outline: 0;
+}
+
+#restart:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  color: rgb(34, 193, 195);
+}
+
+.flip-horizontal-bottom {
+  animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    both;
+}
+
+@keyframes flip-horizontal-bottom {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(-180deg);
+  }
+}
+
+.winner_sequence {
+  filter: brightness(2);
+  box-shadow: 0px 0px 20px 0px rgb(235, 255, 87);
+}

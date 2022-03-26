@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <link rel="stylesheet" href="styles.css">
+    <title>Jogo da velha</title>
+
+  </header>
+  <body>
+    <main>
+      <div class="scoreboard">
+        <div class="scores">
+          <label id="scoreboard_X"for="">jogador X</label>
+          <label for="" id="playerX">0</label>
+        </div>
+        <div class="scores">
+          <label id="scoreboard_O" for="">jogador O:</label>
+          <label id="playerO" for="">0</label>
+        </div>
+      </div>
+
+      <div id="container">
+        <h1>Jogo da velha</h1>
+        <div class="blockSection">
+          <div id="1" class="section">-</div>
+          <div id="2" class="section">-</div>
+          <div id="3" class="section">-</div>
+        </div>
+        <div class="blockSection">
+          <div id="4" class="section">-</div>
+          <div id="5" class="section">-</div>
+          <div id="6" class="section">-</div>
+        </div>
+        <div class="blockSection">
+          <div id="7" class="section">-</div>
+          <div id="8" class="section">-</div>
+          <div id="9" class="section">-</div>
+        </div>
+        <div class="winner_card">
+          
+          <label id="winner"></label>
+        </div>
+        <div id="restart_div">
+          <button id="restart">reiniciar</button>
+        </div>
+      </div>
+      <div id="info_game">
+        <div id="player_choice">
+          <div class="player">
+            <label for="">jogador:</label>
+            <label id="player" for="">-</label>
+          </div>
+       </div>
+      </div>
+
+    </main>
+    
+    <script src="main.js"></script>
+  </body>
+</html>
